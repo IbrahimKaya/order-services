@@ -4,7 +4,6 @@ import hello.Model.OrderMst;
 import hello.Repo.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
@@ -13,8 +12,8 @@ public class OrderService {
     OrderRepository orderRepository;
 
 
-    public Iterable<OrderMst> findAll(){
-        return orderRepository.findAll();
+    public List<OrderMst> findAll(){
+        return (List<OrderMst>) orderRepository.findAll();
     }
 
     public String save(OrderMst orderMst){

@@ -27,7 +27,7 @@ public class OrderController {
 
 
 	@RequestMapping(value = "/order-master",method = RequestMethod.GET)
-	public @ResponseBody Iterable<OrderMst> getAllOrderMaster(){
+	public @ResponseBody List<OrderMst> getAllOrderMaster(){
 		return orderService.findAll();
 	}
 
