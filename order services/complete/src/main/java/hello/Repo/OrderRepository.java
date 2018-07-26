@@ -7,6 +7,6 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface OrderRepository extends CrudRepository<OrderMst, Long> {
 
-    @Query("select status from OrderMst where order_id = :#{#orderId}")
+    @Query("select status from OrderMst where id = :#{#orderId}")
     String getStatusFromMst (int orderId);
 }
