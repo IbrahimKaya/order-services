@@ -6,6 +6,7 @@ import hello.Repo.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
 @Service
 public class OrderUpdateService {
     @Autowired
@@ -14,9 +15,10 @@ public class OrderUpdateService {
     OrderRepository orderRepository;
 
     public String update(Order_Det order_det){
-       if(!orderRepository.existsById((long)(order_det.getOrder_id()))){
-           return "order cannot exists";
-       }
+        if(null ==orderRepository.isExistsById(order_det.getOrder_id())){
+            return "order can not exist";
+        }
+
        String status=orderRepository.getStatusFromMst(order_det.getOrder_id());
 
         if(!status.equals("verified")){
