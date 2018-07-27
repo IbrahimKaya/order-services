@@ -1,2 +1,2 @@
 # order-services
-optiim
+Optiim software internship project
