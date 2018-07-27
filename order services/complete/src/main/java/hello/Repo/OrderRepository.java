@@ -20,4 +20,9 @@ public interface OrderRepository extends CrudRepository<Order_Mst, Long> {
     @Transactional
     @Query("update Order_Mst set status= 'canceled' where id= :id")
     void  cancelStatus(int id);
+
+    @Modifying
+    @Transactional
+    @Query("update Order_Mst set status= 'verified' where id= :id")
+    void verifyStatus(int id);
 }

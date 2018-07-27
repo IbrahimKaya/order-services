@@ -17,7 +17,7 @@ public class OrderCancellationsService {
             return "order already verified";
         }
         if(orderRepository.getStatusFromMst(id).equals("canceled")){
-            return "order already cancell";
+            return "order already canceled";
         }
         orderRepository.cancelStatus(id);
         return  "cancellation successful";
