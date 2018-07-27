@@ -1,6 +1,6 @@
 package hello.Controller;
 
-import hello.Model.OrderMst;
+import hello.Model.Order_Mst;
 import hello.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,7 +16,7 @@ public class OrderController {
 	private OrderService orderService;
 
 		@RequestMapping(value = "/order-master",method = RequestMethod.POST)
-		public @ResponseBody String addNewOrderMaster(@RequestBody OrderMst orderMst){
+		public @ResponseBody String addNewOrderMaster(@RequestBody Order_Mst orderMst){
 
 
 
@@ -27,7 +27,7 @@ public class OrderController {
 
 
 	@RequestMapping(value = "/order-master",method = RequestMethod.GET)
-	public @ResponseBody List<OrderMst> getAllOrderMaster(){
+	public @ResponseBody List<Order_Mst> getAllOrderMaster(){
 		return orderService.findAll();
 	}
 

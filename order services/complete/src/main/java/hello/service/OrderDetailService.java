@@ -1,6 +1,6 @@
 package hello.service;
 
-import hello.Model.OrderDet;
+import hello.Model.Order_Det;
 import hello.Repo.OrderDetRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,11 +12,11 @@ public class OrderDetailService  {
     OrderDetRepository orderDetRepository;
 
 
-    public List<OrderDet> findAll(){
-        return (List<OrderDet>) orderDetRepository.findAll();
+    public List<Order_Det> findAll(){
+        return (List<Order_Det>) orderDetRepository.findAll();
     }
 
-    public String save(OrderDet orderDet){
+    public String save(Order_Det orderDet){
         orderDetRepository.save(orderDet);
         return "order details creations success";
     }

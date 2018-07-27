@@ -1,6 +1,6 @@
 package hello.Controller;
 
-import hello.Model.OrderDet;
+import hello.Model.Order_Det;
 import hello.service.OrderDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,14 +16,14 @@ public class OrderDetController {
     private OrderDetailService orderDetailService;
 
     @RequestMapping(value = "/order-details",method = RequestMethod.POST)
-    public @ResponseBody String addNewOrderDetails(@RequestBody OrderDet OrderDet){
+    public @ResponseBody String addNewOrderDetails(@RequestBody Order_Det Order_Det){
 
 
-        return orderDetailService.save(OrderDet);
+        return orderDetailService.save(Order_Det);
     }
 
     @RequestMapping(value = "/order-details",method = RequestMethod.GET)
-    public @ResponseBody List<OrderDet> getAllOrderDet(){
+    public @ResponseBody List<Order_Det> getAllOrderDet(){
        return orderDetailService.findAll();
    }
 }
