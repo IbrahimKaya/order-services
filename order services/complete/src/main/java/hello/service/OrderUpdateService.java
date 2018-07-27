@@ -13,23 +13,19 @@ public class OrderUpdateService {
     @Autowired
     OrderRepository orderRepository;
 
-
-
     public String update(Order_Det order_det){
-     //  if(!orderRepository.existsById((long)(order_det.getOrder_id()))){
-     //      return "order cannot exists";
-     //  }
-
+       if(!orderRepository.existsById((long)(order_det.getOrder_id()))){
+           return "order cannot exists";
+       }
        String status=orderRepository.getStatusFromMst(order_det.getOrder_id());
 
         if(!status.equals("verified")){
-
-            orderDetRepository.orderDetUpdate(order_det.getOrder_id(),order_det.getLine_no(),order_det.getProduct_id(),order_det.getProduct_name(),order_det.getQuantity(),order_det.getAmount());
-
-
+            orderDetRepository.orderDetUpdate(order_det.getOrder_id(),
+                    order_det.getLine_no(),order_det.getProduct_id(),
+                    order_det.getProduct_name(),order_det.getQuantity(),
+                    order_det.getAmount());
             return"update is success";
         }else{
-
             return "error: order already is verified";
         }
     }

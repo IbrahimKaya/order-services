@@ -16,8 +16,7 @@ public class OrderUpdateController {
 
     @RequestMapping(value = "/order-update",method = RequestMethod.PUT)
     public @ResponseBody String updateOrderDetails(@RequestBody Order_Det Order_Det){
-
-    return orderUpdateService.update(Order_Det);
+        return orderUpdateService.update(Order_Det);
     }
 
 
