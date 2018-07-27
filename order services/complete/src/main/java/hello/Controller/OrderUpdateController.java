@@ -1,6 +1,6 @@
 package hello.Controller;
 
-import hello.Model.OrderDet;
+import hello.Model.Order_Det;
 import hello.service.OrderUpdateService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,10 +14,10 @@ public class OrderUpdateController {
     @Autowired
     private OrderUpdateService orderUpdateService;
 
-    @RequestMapping(value = "/order-update",method = RequestMethod.POST)
-    public @ResponseBody String updateOrderDetails(@RequestBody OrderDet orderDet){
+    @RequestMapping(value = "/order-update",method = RequestMethod.PUT)
+    public @ResponseBody String updateOrderDetails(@RequestBody Order_Det Order_Det){
 
-    return orderUpdateService.update(orderDet);
+    return orderUpdateService.update(Order_Det);
     }
 
 
