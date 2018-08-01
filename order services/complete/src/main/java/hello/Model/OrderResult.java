@@ -6,18 +6,6 @@ import java.util.Objects;
 
 public class OrderResult {
 
-    public OrderResult(Integer id, Integer customer_id, String status, String order_date, Integer line_no, Integer product_id, String product_name, Integer quantity, Integer amount, Integer totalAmount) {
-        this.id = id;
-        this.customer_id = customer_id;
-        this.status = status;
-        this.order_date = order_date;
-        this.line_no = line_no;
-        this.product_id = product_id;
-        this.product_name = product_name;
-        this.quantity = quantity;
-        this.amount = amount;
-        this.totalAmount = totalAmount;
-    }
 
     private Integer id;
     private Integer customer_id;

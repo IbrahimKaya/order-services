@@ -18,6 +18,4 @@ public class OrderUpdateController {
     public @ResponseBody String updateOrderDetails(@RequestBody Order_Det Order_Det){
         return orderUpdateService.update(Order_Det);
     }
-
-
 }

@@ -19,11 +19,10 @@ public class OrderResultService {
     private OrderDetRepository orderDetRepository;
     @Autowired
     private OrderRepository orderRepository;
-    //private OrderResult orderResult;
 
     public OrderResult getOrderResultById(int id){
         int totalAmount;
-        OrderResult orderResult=new OrderResult(0,0,"new","",0,0,"",0,2,0);
+        OrderResult orderResult=new OrderResult();
 
         Optional<Order_Mst> orderMstTemp=  orderRepository.findById(id);
         Optional<Order_Det> orderDetTemp= orderDetRepository.findById(id);
@@ -41,9 +40,6 @@ public class OrderResultService {
         orderResult.setStatus(orderMstTemp.get().getStatus());
         orderResult.setTotalAmount(totalAmount);
 
-
-
         return orderResult;
-
     }
 }

@@ -1,6 +1,5 @@
 package hello.Controller;
 
-import hello.Model.OrderResult;
 import hello.Model.Order_Mst;
 import hello.service.OrderResultService;
 import hello.service.OrderService;
@@ -10,7 +9,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
 
 @Controller
 @RequestMapping(path = "/order")
