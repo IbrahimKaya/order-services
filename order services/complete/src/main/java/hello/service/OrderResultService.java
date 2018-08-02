@@ -5,12 +5,8 @@ import hello.Model.Order_Det;
 import hello.Model.Order_Mst;
 import hello.Repo.OrderDetRepository;
 import hello.Repo.OrderRepository;
-import org.hibernate.criterion.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import javax.persistence.Convert;
-import java.util.List;
 import java.util.Optional;
 
 @Service
