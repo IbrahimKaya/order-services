@@ -3,14 +3,11 @@ package hello.Model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-
 @Entity
 public class Order_Det {
 
      public Order_Det(){}
-
     @Id
-
     private Integer order_id;
     private Integer line_no;
     private Integer product_id;
@@ -65,6 +62,4 @@ public class Order_Det {
     public void setAmount(Integer amount) {
         this.amount = amount;
     }
-
-
 }
