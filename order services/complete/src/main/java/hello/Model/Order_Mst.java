@@ -3,26 +3,22 @@ package hello.Model;
 import javax.persistence.*;
 import java.util.List;
 
-
 @Entity
 public class Order_Mst {
+
+	public Order_Mst() {
+	}
 
 	@Id
     @GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer id;
+	private Integer customer_id;
+	private String status;
+	private String date;
 
 //	@JoinColumn
 //	@OneToMany
 //	private List<Order_Det>;
-
-
-	private Integer customer_id;
-
-	private String status;
-
-
-
-	private String date;
 
 	public String getDate() {
 		return date;
@@ -31,12 +27,6 @@ public class Order_Mst {
 	public void setDate(String date) {
 		this.date = date;
 	}
-
-
-	public Order_Mst() {
-	}
-
-
 
 	public Integer getCustomer_id() {
 		return customer_id;
